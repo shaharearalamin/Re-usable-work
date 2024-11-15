@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>demo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header{
+        padding: 20px;
+      }
+
+      .offcanvass ul li {
+        border: 1px solid #000;
+        text-transform: capitalize;
+        list-style-type: none;
+      }
+
+      .submenu li{
+        background: crimson;
+      }
+
+      .submenu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.1s ease-in-out; /* Smooth transition */
+      }
+
+      .submenu.show {
+        max-height: 1000px; /* Adjust this if needed */
+      }
+      .show2{
+        transform: rotate(180deg);
+        transition: max-height 0.1s ease-in-out; /* Smooth transition */
+
+      }
+
+      .offcanvasDropdown a {
+        width: 100%;
+        display: block;
+        background: red;
+      }
+      .offcanvasDropContent{
+        display: flex !important;
+        align-items: center;
+        align-content: center;
+        justify-content:space-between ;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="offcanvass"> 
+      <ul>
+        <li><a href="#">Home</a></li>
+
+        <li class="offcanvasDropdown">
+
+          <a class="offcanvasDropContent " href="#">
+            <span>
+              About
+          </span>
+            <span><i class="fa-solid fa-chevron-down submenuicon"></i> </span>
+          </a>
+
+          <ul class="submenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <li class="offcanvasDropdown">
+
+          <a class="offcanvasDropContent " href="#">
+            <span>
+              About
+          </span>
+            <span><i class="fa-solid fa-chevron-down submenuicon"></i> </span>
+          </a>
+
+          <ul class="submenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      </div>
+    </header>
+    
+    <footer></footer>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jquary cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      // $(function(){
+      //   $(".offcanvasDropdown a").click(function(event){
+      //     var submenu = $(this).next(".submenu");
+      //     submenu.toggleClass("show");
+      //     $(".submenuicon").toggleClass("show2")
+      //     event.stopPropagation();
+      //   });
+      //   $(document).click(function(event) {
+      //     if (!$(event.target).closest('.offcanvasDropdown').length) {
+      //       $(".submenu").removeClass("show");
+      //       $(".submenuicon").toggleClass("show2")
+      //     }
+      //   });
+      //   $(".offcanvasDropdown").click(function(event){
+      //     event.stopPropagation();
+      //   });
+      // });
+      $(function(){
+  $(".offcanvasDropdown a").click(function(event){
+    var submenu = $(this).next(".submenu");
+    submenu.toggleClass("show");
+
+    // Specific icon toggle
+    $(this).find(".submenuicon").toggleClass("show2");
+    event.stopPropagation();
+  });
+
+  $(document).click(function(event) {
+    if (!$(event.target).closest('.offcanvasDropdown').length) {
+      $(".submenu").removeClass("show");
+      $(".submenuicon").removeClass("show2"); // Close all icons
+    }
+  });
+
+  $(".offcanvasDropdown").click(function(event){
+    event.stopPropagation();
+  });
+});
+
+    </script>
+  </body>
+</html>
