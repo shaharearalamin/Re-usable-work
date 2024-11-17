@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category Slider</title>
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <!-- font awosome icon cdn  -->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    
+
+/* start category section  */
+#category{
+  width: 100%;
+  height: 500px;
+  border: 1px solid #000;
+  margin-bottom: 100px ;
+  background-color: #c9c9c9;
+}
+
+.categoryHeading h2{
+ font-size: clamp(30px, 3vw, 35px);
+  font-family: var(--heading-font);
+  color: var(--dark-color);
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 140%;
+  margin-bottom: 1rem;
+  border: 1px solid #000;
+}
+.categorySlider .item{
+  height: 200px;
+  border: 1px solid #000;
+}
+
+
+/* end category section  */
+
+/* ---------------------------- */
+.categorySliderWrapper {
+  position: relative; /* Ensure the parent container allows child positioning */
+}
+
+.categorySliderWrapper .categoryItem {
+  border: 1px solid #000;
+  min-height: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Make sure the card is positioned relative to its container */
+  z-index: 1; /* Ensure card stays above any other elements */
+}
+
+.categorySliderWrapper .categoryItem:hover {
+  transform: translateY(-10px); /* Move the card up */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover for more depth */
+}
+
+.categorySliderWrapper .owl-item {
+  margin: 20px auto ;
+}
+.categoryHeading{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  background: red;
+}
+  </style>
+</head>
+<body>
+
+  
+     <!-- start category section  -->
+     <section id="category">
+      <div class="container-fluid">
+        <div class="categoryHeading d-flex justify-content-between align-items-center">
+          <h2>Category 1</h2>
+          <!-- Custom buttons for Category 1 -->
+          <div class="category-nav">
+            <button class="btn fs-5">View All Categories →</button>
+            <button class="owl-prev" data-target="category1"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="owl-next" data-target="category1"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+    
+        <div class="owl-carousel owl-theme categorySliderWrapper category1">
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Fruits & Veges</h4>
+            </div>
+          </div>
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Bakery Items</h4>
+            </div>
+          </div>
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Dairy Products</h4>
+            </div>
+          </div>
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Meat & Poultry</h4>
+            </div>
+          </div>
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Frozen Foods</h4>
+            </div>
+          </div>
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Beverages</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+     <!-- end category section  -->
+  
+     <!-- start brand section  -->
+     <section id="category">
+      <div class="container-fluid">
+        <div class="categoryHeading d-flex justify-content-between align-items-center">
+          <h2>Category 1</h2>
+          <!-- Custom buttons for Category 1 -->
+          <div class="category-nav">
+            <button class="btn fs-5">View All Categories →</button>
+            <button class="owl-prevBrand" data-target="category2"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="owl-nextBrand" data-target="category2"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+    
+        <div class="owl-carousel owl-theme categorySliderWrapper brandSliderWrapper category2">
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Fruits & Veges</h4>
+            </div>
+          </div>
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Bakery Items</h4>
+            </div>
+          </div>
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Dairy Products</h4>
+            </div>
+          </div>
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Meat & Poultry</h4>
+            </div>
+          </div>
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Frozen Foods</h4>
+            </div>
+          </div>
+          <div class="categoryItem">
+            <div class="categoryCardIcon">
+              <span>
+                <img src="./assets/images/icon-bread-baguette.png" alt="">
+              </span>
+            </div>
+            <div class="categoryCardHeading">
+              <h4>Beverages</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+     <!-- end brand section  -->
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  
+// catergory owl carousel slider 
+$(document).ready(function(){
+  // Initialize Owl Carousels for multiple sliders
+  $(".categorySliderWrapper").each(function() {
+    var owl = $(this); // Each individual carousel
+
+    owl.owlCarousel({
+      items: 1,  // Default to 1 item
+      loop: true,
+      margin: 10,
+      nav: false, // Disable default nav
+      dots: false, // Disable dots
+      responsive: {
+        0: { // For screens 0px to 600px
+          items: 1
+        },
+        600: { // For screens 600px to 1000px
+          items: 3
+        },
+        1000: { // For screens 1000px and above
+          items: 6
+        }
+      }
+    });
+  });
+
+  // Custom next and prev button functionality
+  $(".owl-next, .owl-prev").click(function() {
+    var target = $(this).data('target'); // Get the target slider (e.g., category1, category2)
+    var owl = $("." + target); // Select the corresponding owl-carousel based on the target
+
+    if ($(this).hasClass('owl-next')) {
+      owl.trigger('next.owl.carousel');
+    } else if ($(this).hasClass('owl-prev')) {
+      owl.trigger('prev.owl.carousel');
+    }
+  });
+});
+
+// catergory owl carousel slider 
+  
+// brand owl carousel slider 
+$(document).ready(function(){
+  // Initialize Owl Carousels for multiple sliders
+  $(".brandSliderWrapper").each(function() {
+    var owl = $(this); // Each individual carousel
+
+    owl.owlCarousel({
+      items: 1,  // Default to 1 item
+      loop: true,
+      margin: 10,
+      nav: false, // Disable default nav
+      dots: false, // Disable dots
+      responsive: {
+        0: { // For screens 0px to 600px
+          items: 1
+        },
+        600: { // For screens 600px to 1000px
+          items: 3
+        },
+        1000: { // For screens 1000px and above
+          items: 6
+        }
+      }
+    });
+  });
+
+  // Custom next and prev button functionality
+  $(".owl-nextBrand, .owl-prevBrand").click(function() {
+    var target = $(this).data('target'); // Get the target slider (e.g., category1, category2)
+    var owl = $("." + target); // Select the corresponding owl-carousel based on the target
+
+    if ($(this).hasClass('owl-nextBrand')) {
+      owl.trigger('next.owl.carousel');
+    } else if ($(this).hasClass('owl-prevBrand')) {
+      owl.trigger('prev.owl.carousel');
+    }
+  });
+});
+
+
+// brand owl carousel slider 
+</script>
+</body>
+</html>
+
+⁡⁣⁢⁣// Note.......
+/* ekhane amra multiple card slider niye kaj korchi jeno amader bujte subdha hoi amara jokhon ekti template a akadhik slider niye kaj korbo tokhon ei 
+somossa amader face kora lagte pare tai multiple slider ar jonno kaj kore rakha holo*/
+/*ekhane amra sudho change korbo button ar next and prev ar class gulo and amra change korbo button ar category1 and main div ar catagory1 
+taholei amra alada alda slider niye kaj korte parbo amra template a ekadhitk slider used korte parbo */⁡
