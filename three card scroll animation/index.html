@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>slider</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      
+/* start blog section  */
+#blog{
+  margin: 1200px auto !important;
+  min-height: 50vh !important;
+}
+#blog .blogHeading{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 50px ;
+}
+#blog .blogHeading button{
+  border: none !important;
+  outline: none !important;
+}
+
+#blog .container-fluid{
+  min-height: 50vh !important;
+}
+#blog .card{
+  overflow: hidden;
+}
+#blog .card-body p{
+  color: var(--paragraph-color);
+}
+#blog .card img{
+  transition: all .2s ease-in-out;
+height: 350px ;
+object-fit: cover !important;
+}
+#blog .card:hover img {
+  transform: scale(1.1);
+}
+.blogCardImgWrapper{
+  height: 350px;
+  overflow: hidden;
+}
+
+/* gpt scroll animation */
+#blog .card {
+  opacity: 0;
+  transform: translateX(0) translateY(0); 
+  transition: transform 0.6s ease, opacity 0.6s ease; 
+}
+#blog .card[data-direction="left"] {
+  transform: translateX(-100px); 
+}
+
+#blog .card.animate[data-direction="left"] {
+  transform: translateX(0); 
+  opacity: 1;
+}
+
+
+#blog .card[data-direction="top"] {
+  transform: translateY(-100px); 
+}
+
+#blog .card.animate[data-direction="top"] {
+  transform: translateY(0); 
+  opacity: 1;
+}
+
+#blog .card[data-direction="right"] {
+  transform: translateX(100px);
+}
+
+#blog .card.animate[data-direction="right"] {
+  transform: translateX(0); 
+  opacity: 1;
+}
+
+/* gpt scroll animation */
+/* end blog section  */
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main>
+      
+     <!-- start blog section  -->
+      <section id="blog">
+          <div class="container-fluid">
+            <div class="blogHeading">
+              <h2>Our Recent Blog</h2>
+              <button class="btn">Read All Articles <i class="fa-solid fa-arrow-right"></i> </button>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <!-- Card 1 -->
+              <div class="col col-sm-6  col-lg-4">
+                <div class="card h-100">
+                  <div class="blogCardImgWrapper"> 
+                  <img src="./assets/images/post-thumb-1.jpg" 
+                  class="card-img-top" alt="Image 1">
+                </div>
+                  <div class="card-footer d-flex gap-3 text-muted">
+                    <div class="cardIconOne">
+                      <span><i class="fa-solid fa-calendar-days me-2"></i></span><span>22 Aug 2021</span>
+                    </div>
+                    <div class="cardIconOne">
+                      <span><i class="fa-regular fa-file me-2"></i></span><span>TIPS & TRICKS</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Top 10 casual look ideas to dress up your kids</h3>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="col col-sm-6  col-lg-4">
+                <div class="card h-100">
+                  <div class="blogCardImgWrapper"> 
+                  <img src="./assets/images/post-thumb-2.jpg" 
+                  class="card-img-top" alt="Image 1">
+                </div>
+                  <div class="card-footer d-flex gap-3 text-muted">
+                    <div class="cardIconOne">
+                      <span><i class="fa-solid fa-calendar-days me-2"></i></span><span>22 Aug 2021</span>
+                    </div>
+                    <div class="cardIconOne">
+                      <span><i class="fa-regular fa-file me-2"></i></span><span>TIPS & TRICKS</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Top 10 casual look ideas to dress up your kids</h3>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="col col-sm-6  col-lg-4">
+                <div class="card h-100">
+                  <div class="blogCardImgWrapper"> 
+                  <img src="./assets/images/post-thumb-3.jpg" 
+                  class="card-img-top" alt="Image 1">
+                </div>
+                  <div class="card-footer d-flex gap-3 text-muted">
+                    <div class="cardIconOne">
+                      <span><i class="fa-solid fa-calendar-days me-2"></i></span><span>22 Aug 2021</span>
+                    </div>
+                    <div class="cardIconOne">
+                      <span><i class="fa-regular fa-file me-2"></i></span><span>TIPS & TRICKS</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Top 10 casual look ideas to dress up your kids</h3>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+      </section>
+     <!-- end blog section  -->
+
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      
+// gpt scroll animation for Blog section 
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".card");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+        } else {
+          entry.target.classList.remove("animate");
+        }
+      });
+    },
+    {
+      threshold: 0.2, 
+    }
+  );
+
+  cards.forEach((card, index) => {
+    if (index % 3 === 0) {
+      card.setAttribute("data-direction", "left");
+    } else if (index % 3 === 1) {
+      card.setAttribute("data-direction", "top");
+    } else {
+      card.setAttribute("data-direction", "right");
+    }
+    observer.observe(card);
+  });
+});
+
+// gpt scroll animation for Blog section 
+    </script>
+  </body>
+</html>
