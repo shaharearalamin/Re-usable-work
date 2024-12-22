@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #b2b2b2;
+}
+
+.tp-brand-slide-element{
+    width: auto;
+}
+.tp-brand-area{
+    background-color: yellow;
+    padding: 20px;
+}
+.tp-slide-transtion{
+    transition-timing-function:linear ;
+}
