@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter Animation | WEBDEV16</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.css"
+      integrity="sha512-kMPqFnKueEwgQFzXLEEl671aHhQqrZLS5IP3HzqdfozaST/EgU+/wkM07JCmXFAt9GO810I//8DBonsJUzGQsQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+        <div class="subscribers-odometer odometer plus">0</div> <br>
+        <div class="videos-odometer odometer plus">0</div>
+      </div>
+     
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js"
+      integrity="sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      const createOdometer = (el, value) => {
+        const odometer = new Odometer({
+          el: el,
+          value: 0,
+        });
+        let hasRun = false;
+        const options = {
+          threshold: [0, 0.9],
+        };
+        const callback = (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (!hasRun) {
+                odometer.update(value);
+                hasRun = true;
+              }
+            }
+          });
+        };
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(el);
+      };
+      
+      const counter1 = document.querySelector(".subscribers-odometer");
+      createOdometer(counter1, 20);
+      const videosOdometer = document.querySelector(".videos-odometer");
+      createOdometer(videosOdometer, 790);
+      const projectsOdometer = document.querySelector(".projects-odometer");
+      createOdometer(projectsOdometer, 89);
+    </script>
+  </body>
+</html>
